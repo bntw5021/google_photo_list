@@ -1,0 +1,9 @@
+%h1
+  アルバム一覧
+%dl
+  - @albums.each do |album|
+    %dt= album.title
+    %dd
+      %p= album.album_url
+      %p= album.cover_url
+      %p= album.count
