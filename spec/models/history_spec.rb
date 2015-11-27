@@ -25,7 +25,7 @@ RSpec.describe History, type: :model do
       let(:no_album_id_history) { History.new(update_date: Date.today, count: 0, album_id: nil) }
       it "require album_id" do
         expect(no_album_id_history).to_not be_valid
-        expect(no_album_id_history.errors[:album_id]).to_not be_empty
+        expect(no_album_id_history.errors[:album]).to_not be_empty
       end
     end
 
