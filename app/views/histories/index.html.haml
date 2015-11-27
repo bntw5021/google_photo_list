@@ -1,0 +1,8 @@
+%h1
+  更新履歴一覧
+%dl
+  - @histories.each do |history|
+    %dt= history.update_date
+    %dd
+      %p= history.count
+      %p= history.album_id
