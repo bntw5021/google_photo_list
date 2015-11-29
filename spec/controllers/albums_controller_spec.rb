@@ -7,4 +7,11 @@ RSpec.describe AlbumsController, type: :controller do
       expect(assigns(:albums)).to_not be_nil
     end
   end
+
+  describe "#new" do
+    it "assigns @album" do
+      get :new
+      expect(assigns(:album)).to_not be_nil
+    end
+  end
 end
