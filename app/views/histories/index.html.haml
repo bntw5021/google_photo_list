@@ -3,7 +3,9 @@
 %table
   - @histories.each do |history|
     %tr
-      %th= history.update_date
+      %th= history.id
+      %td= history.update_date
       %td= history.count
       %td= history.album_id
 = link_to "更新履歴を追加する", new_history_path
+= link_to "アルバムを見る", albums_path

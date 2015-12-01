@@ -3,8 +3,10 @@
 %table
   - @albums.each do |album|
     %tr
-      %th= album.title
+      %th= album.id
+      %td= album.title
       %td= album.album_url
       %td= album.cover_url
       %td= album.count
 = link_to "アルバムを追加する", new_album_path
+= link_to "更新履歴を見る", histories_path
