@@ -1,10 +1,10 @@
 %h1
   アルバム一覧
-%dl
+%table
   - @albums.each do |album|
-    %dt= album.title
-    %dd
-      %p= album.album_url
-      %p= album.cover_url
-      %p= album.count
+    %tr
+      %th= album.title
+      %td= album.album_url
+      %td= album.cover_url
+      %td= album.count
 = link_to "アルバムを追加する", new_album_path

@@ -1,9 +1,9 @@
 %h1
   更新履歴一覧
-%dl
+%table
   - @histories.each do |history|
-    %dt= history.update_date
-    %dd
-      %p= history.count
-      %p= history.album_id
+    %tr
+      %th= history.update_date
+      %td= history.count
+      %td= history.album_id
 = link_to "更新履歴を追加する", new_history_path
