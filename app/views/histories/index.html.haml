@@ -7,5 +7,6 @@
       %td= history.update_date
       %td= history.count
       %td= history.album_id
+      %td= link_to "削除する", history, method: :delete
 = link_to "更新履歴を追加する", new_history_path
 = link_to "アルバムを見る", albums_path

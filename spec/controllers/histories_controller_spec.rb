@@ -26,4 +26,17 @@ RSpec.describe HistoriesController, type: :controller do
       }.from(0).to(1)
     end
   end
+
+  describe "#destroy" do
+    let!(:album) { Album.create(title: "title", album_url: "album_url", cover_url: "cover_url", count: 0) }
+    let!(:history) { History.create(update_date: Date.today, count: 0, album_id: album.id) }
+
+    it "destroy history" do
+      expect {
+        delete :destroy, id: history.id
+      }.to change {
+        History.count
+      }.from(1).to(0)
+    end
+  end
 end
