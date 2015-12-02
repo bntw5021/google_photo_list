@@ -24,4 +24,16 @@ RSpec.describe AlbumsController, type: :controller do
       }.from(0).to(1)
     end
   end
+
+  describe "#destroy" do
+    let!(:album) { Album.create(title: "title", album_url: "album_url", cover_url: "cover_url", count: 0) }
+
+    it "destroy album" do
+      expect {
+        delete :destroy, id: album.id
+      }.to change {
+        Album.count
+      } .from(1).to(0)
+    end
+  end
 end

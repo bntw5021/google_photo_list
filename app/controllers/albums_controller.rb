@@ -11,4 +11,9 @@ class AlbumsController < ApplicationController
     Album.create(params.require(:album).permit(:title, :album_url, :cover_url, :count))
     redirect_to action: :index
   end
+
+  def destroy
+    Album.find(params[:id]).destroy
+    redirect_to action: :index
+  end
 end
