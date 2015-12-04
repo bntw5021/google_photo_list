@@ -1,3 +1,16 @@
-- @albums.each do |album|
-  %a{:href => album.album_url, :title => album.title}
-    %img{:src => album.cover_url, :alt => album.title}
+%div#page-title
+
+%div#page-subtitle
+  %h2= @albums.count
+  %h2= @albums.sum(:count)
+
+%div#album-list
+  - @albums.each do |album|
+    %div.album
+      %a{:href => album.album_url, :title => album.title}
+        %img.img-circle{:src => album.cover_url, :alt => album.title}
+      %div.album-info
+        %span.small= album.title
+        %span.badge= album.count
+
+%div#history-list
