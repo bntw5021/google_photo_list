@@ -1,8 +1,7 @@
 %div#page-title
 
 %div#page-subtitle
-  %h2= @albums.count
-  %h2= @albums.sum(:count)
+  %h2= "#{@albums.count} Albums, #{@albums.sum(:count)} Photos"
 
 %div#album-list
   - @albums.each do |album|
