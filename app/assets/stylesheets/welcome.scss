@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#page-title, #page-subtitle, #album-list, #history-list {
+.section {
   margin: 20px;
 }
 
@@ -21,6 +21,17 @@
 
 .album-info {
   text-align: center;
+}
+
+.album-img:hover {
+  opacity: 0.5;
+}
+
+#history-list {
+  border-top: 1px solid #ccc;
+  :first-child {
+    margin: 20px 0 0 0;
+  }
 }
 
 .history-item {

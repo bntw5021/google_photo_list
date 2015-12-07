@@ -1,17 +1,17 @@
-%div#page-title
+%div.section#page-title
 
-%div#page-subtitle
+%div.section#page-subtitle
   %h2= "#{@albums.count} Albums, #{@albums.sum(:count)} Photos"
 
-%div#album-list.clearfix
+%div.section#album-list.clearfix
   - @albums.each do |album|
     %div.album
       %a{:href => album.album_url, :title => album.title}
-        %img.img-circle{:src => album.cover_url, :alt => album.title}
+        %img.img-circle.album-img{:src => album.cover_url, :alt => album.title}
       %div.album-info
         %span.small= album.title
         %span.badge= album.count
 
-%div#history-list
+%div.section#history-list
   - @histories.each do |history|
     %p.history-item= "#{history.update_date} 「#{@albums.find_by(id: history.album_id).title}」 #{history.count}枚追加"
