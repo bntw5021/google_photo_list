@@ -10,30 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_tree .
+ *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-a {
-  text-decoration: none;
-}
-
-#page-title {
-  margin: 20px;
-}
-
-#page-subtitle {
-  margin: 20px;
-}
-
-.album {
-  width: 160px;
-  height: 180px;
-  float: left;
-  margin: 20px 0px 0px 20px;
-}
-
-.album-info {
-  text-align: center;
-}

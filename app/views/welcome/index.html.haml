@@ -3,7 +3,7 @@
 %div#page-subtitle
   %h2= "#{@albums.count} Albums, #{@albums.sum(:count)} Photos"
 
-%div#album-list
+%div#album-list.clearfix
   - @albums.each do |album|
     %div.album
       %a{:href => album.album_url, :title => album.title}
@@ -13,3 +13,5 @@
         %span.badge= album.count
 
 %div#history-list
+  - @histories.each do |history|
+    %p.history-item= "#{history.update_date} 「#{@albums.find_by(id: history.album_id).title}」 #{history.count}枚追加"

@@ -1,3 +1,28 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#page-title, #page-subtitle, #album-list, #history-list {
+  margin: 20px;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.album {
+  width: 160px;
+  height: 180px;
+  float: left;
+  margin-right: 20px;
+}
+
+.album-info {
+  text-align: center;
+}
+
+.history-item {
+  margin: 0;
+}
