@@ -9,7 +9,7 @@
       %a{:href => album.album_url, :title => album.title}
         %img.img-circle.album-img{:src => album.cover_url, :alt => album.title}
       %div.album-info
-        %span.small= album.title
+        %span= album.title
         %span.badge= album.count
 
 %div.section#history-list
