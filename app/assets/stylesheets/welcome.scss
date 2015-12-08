@@ -30,11 +30,19 @@
 
 #history-list {
   border-top: 1px solid #ccc;
-  :first-child {
-    margin: 20px 0 0 0;
-  }
+  padding-top: 20px;
 }
 
-.history-item {
-  margin: 0;
+.history-item > div {
+  float: left;
+  margin-right: 20px;
+}
+
+.history-item > div.history-title {
+  width: 160px;
+}
+
+.history-item > div.history-count {
+  width: 80px;
+  text-align: right;
 }

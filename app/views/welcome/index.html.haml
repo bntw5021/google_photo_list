@@ -14,4 +14,7 @@
 
 %div.section#history-list
   - @histories.each do |history|
-    %p.history-item= "#{history.update_date} 「#{@albums.find_by(id: history.album_id).title}」 #{history.count}枚追加"
+    %div.history-item.clearfix
+      %div= "#{history.update_date}"
+      %div.history-title= "「#{@albums.find_by(id: history.album_id).title}」"
+      %div.history-count= "#{history.count}枚追加"
