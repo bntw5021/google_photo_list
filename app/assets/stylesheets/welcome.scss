@@ -6,6 +6,11 @@
   margin: 20px;
 }
 
+.section > div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .clearfix:after {
     content: '';
     display: block;
@@ -14,10 +19,9 @@
 
 .album {
   width: 180px;
-  height: 200px;
+  height: 180px;
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .album-info {
@@ -28,13 +32,11 @@
   opacity: 0.5;
 }
 
-#history-list {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-}
-
 .history-item > div {
   float: left;
+}
+
+.history-item > div:first-child {
   margin-right: 20px;
 }
 
