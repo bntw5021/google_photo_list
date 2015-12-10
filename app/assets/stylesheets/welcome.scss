@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .section {
-  margin: 20px;
+  margin: 40px;
 }
 
 .section > div {
@@ -18,14 +18,19 @@
 }
 
 .album {
-  width: 180px;
-  height: 180px;
+  width: 260px;
+  height: 260px;
   float: left;
   margin: 20px;
 }
 
 .album-info {
   text-align: center;
+}
+
+.album-img {
+  width: 240px;
+  height: 240px;
 }
 
 .album-img:hover {
