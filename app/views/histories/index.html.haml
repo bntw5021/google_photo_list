@@ -1,9 +1,15 @@
 %h1
   更新履歴一覧
 %table
+  %tr
+    %th= "id"
+    %th= "update_date"
+    %th= "count"
+    %th= "album_id"
+    %th= "削除する"
   - @histories.each do |history|
     %tr
-      %th= history.id
+      %td= history.id
       %td= history.update_date
       %td= history.count
       %td= history.album_id

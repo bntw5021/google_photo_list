@@ -1,9 +1,16 @@
 %h1
   アルバム一覧
 %table
+  %tr
+    %th= "id"
+    %th= "title"
+    %th= "album_url"
+    %th= "cover_url"
+    %th= "count"
+    %th= "削除する"
   - @albums.each do |album|
     %tr
-      %th= album.id
+      %td= album.id
       %td= album.title
       %td= album.album_url
       %td= album.cover_url
