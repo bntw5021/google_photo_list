@@ -7,6 +7,7 @@
     %th= "album_url"
     %th= "cover_url"
     %th= "count"
+    %th= "編集する"
     %th= "削除する"
   - @albums.each do |album|
     %tr
@@ -15,6 +16,7 @@
       %td= album.album_url
       %td= album.cover_url
       %td= album.count
+      %td= link_to "編集する", edit_album_path(album)
       %td= link_to "削除する", album, method: :delete
 = link_to "アルバムを追加する", new_album_path
 = link_to "更新履歴を見る", histories_path

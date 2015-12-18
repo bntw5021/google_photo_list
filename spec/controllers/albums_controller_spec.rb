@@ -36,4 +36,13 @@ RSpec.describe AlbumsController, type: :controller do
       } .from(1).to(0)
     end
   end
+
+  describe "#edit" do
+    let!(:album) { Album.create(title: "title", album_url: "album_url", cover_url: "cover_url", count: 0) }
+
+    it "edit album" do
+      get :edit, id: album
+      expect(assigns(:album)).to eq(album)
+    end
+  end
 end
