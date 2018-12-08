@@ -1,0 +1,25 @@
+.container-fluid
+  h1 アルバム一覧
+
+  .float-right
+    =<> link_to 'アルバムを追加する', new_album_path, class: 'btn btn-link'
+    =<> link_to '更新履歴を見る', histories_path, class: 'btn btn-link'
+
+  table.table.table-striped
+    tr
+      th id
+      th title
+      th album_url
+      th cover_url
+      th count
+      th 編集
+      th 削除
+    - @albums.each do |album|
+      tr
+        td = album.id
+        td = album.title
+        td style='word-break: break-all;' = album.album_url
+        td style='word-break: break-all;' = album.cover_url
+        td = album.count
+        td = link_to '編集', edit_album_path(album)
+        td = link_to '削除', album, method: :delete

@@ -1,0 +1,23 @@
+.container-fluid
+  h1 更新履歴一覧
+
+  .float-right
+    =<> link_to '更新履歴を追加する', new_history_path, class: 'btn btn-link'
+    =<> link_to 'アルバムを見る', albums_path, class: 'btn btn-link'
+
+  table.table.table-striped
+    tr
+      th id
+      th update_date
+      th count
+      th album_id
+      th 編集
+      th 削除
+    - @histories.each do |history|
+      tr
+        td = history.id
+        td = history.update_date
+        td = history.count
+        td = history.album_id
+        td = link_to '編集', edit_history_path(history)
+        td = link_to '削除', history, method: :delete
