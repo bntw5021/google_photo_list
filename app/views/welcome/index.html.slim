@@ -1,5 +1,5 @@
 .container-fluid
-  h1 = "#{@albums.count} Albums, #{@albums.sum(:count)} Photos"
+  h1 Kayashin
   hr
   .row
     - @albums.each do |album|
@@ -7,4 +7,4 @@
         a href="#{album.album_url}" title="#{album.title}"
           img.rounded-circle src="#{album.cover_url}" alt="#{album.title}"
         div
-          h5 = "#{album.title}(#{album.count}枚)"
+          h5 = "#{album.title}"
